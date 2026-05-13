@@ -8,29 +8,24 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
-      rules: [
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/, /api/],
+        include: /client/,
+        use: [
           {
-              test: /\.js$/,
-              exclude: [
-                /node_modules/,
-                /api/,
-              ],
-              include: /client/,
-              use: [
-                  {
-                      loader: 'babel-loader',
-                      options: {
-                          presets: ['@babel/preset-react']
-                      }
-                  },
-                 {    
-                     test: /\.css$/,
-                    use: ['style-loader', 'css-loader']
-                 }
-                  
-              ]
-              
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-react']
+            }
           }
-      ]
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   }
 };
