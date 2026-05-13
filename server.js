@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 const { router: measurementsRouter } = require('./api/routes/measurements.routes');
 
+
 app.use(express.static(path.resolve(__dirname, 'dist')));
 
 const { connectToDatabase } = require('./database');

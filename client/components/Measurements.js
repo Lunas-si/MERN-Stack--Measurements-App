@@ -14,7 +14,8 @@ function Measurements() {
             const json = await response.json();
             setData(json);
             if (json.length > 0) {
-                const sum = json.reduce((acc, m) => acc + m.temperature, 0);
+                //const sum = json.reduce((acc, m) => acc + m.temperature, 0);
+                const sum = json.reduce((acc, m) => acc + Number(m.temperature), 0);
                 const avg = sum / json.length;
                 setAverage(avg);
             } else {
@@ -96,7 +97,7 @@ function Measurements() {
                             sortedData.map((measurement) => (
                                 <tr key={measurement._id}>
                                     <td>{measurement.unit_id ?? "N/A"}</td>
-                                    <td>{measurement.temperature?.toFixed(1) ?? "N/A"}</td>
+                                    <td>{measurement.temperature != null ? Number(measurement.temperature).toFixed(1) : "N/A"}</td>
                                     <td>{measurement.unix_timestamp ?? "N/A"}</td>
                                 </tr>
                             ))
