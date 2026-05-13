@@ -10,8 +10,11 @@ app.use(express.static(path.resolve(__dirname, 'dist')));
 
 const { connectToDatabase } = require('./database');
 
-app.get("/", (_, res) => {
+/*app.get("/", (_, res) => {
     res.sendFile("index.html");
+});*/
+app.get("/", (_, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.use(measurementsRouter);
