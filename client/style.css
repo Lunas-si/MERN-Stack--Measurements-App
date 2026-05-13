@@ -1,0 +1,77 @@
+/* Table styling */
+.measurements-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.measurements-table thead tr {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+}
+
+.measurements-table th,
+.measurements-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.measurements-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.2s;
+}
+
+.measurements-table th {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.measurements-table th:hover {
+    background-color: #0056b3;
+}
+
+/* Sorting indicator */
+.sort-indicator {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+/* Average temperature box */
+.average-box {
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+/* Refresh button */
+.refresh-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 15px;
+}
+
+.refresh-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .measurements-table th,
+    .measurements-table td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}
