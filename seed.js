@@ -13,7 +13,8 @@ const measurements = [
   { unit_id: 3, temperature: -2.3, unix_timestamp: 1747028400 },
   { unit_id: 2, temperature: 0.8, unix_timestamp: 1747032000 },
   { unit_id: 1, temperature: 1.9, unix_timestamp: 1747035600 },
-  { unit_id: 3, temperature: -1.1, unix_timestamp: 1747039200 }
+  { unit_id: 3, temperature: -1.1, unix_timestamp: 1747039200 },
+  { unit_id: 4, temperature: -3.2, unix_timestamp: 1747039300}
 ];
 
 async function seed() {
