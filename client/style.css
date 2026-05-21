@@ -20,7 +20,7 @@
 }
 
 .measurements-table tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #e9ecef;
     transition: 0.2s;
 }
 
